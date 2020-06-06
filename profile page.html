@@ -16,6 +16,7 @@
                padding:0;
             }
 
+
             .logo {
                 max-width:10%;
             }
@@ -30,17 +31,28 @@
                 border-radius: 100%;
             }
             
-            #home {
-                text-align: center;
+            #home {               
+                padding:5%;      
+            }
+
+            .parallax-welcome {
                 background-image:url("blue_background.jpg");
                 background-size: cover;
-                padding:5%;
-               
-
-                
-               
-
+                background-repeat:no-repeat;
+                background-attachment: fixed;
+                background-position: center;
+                height:100%;
             }
+
+            .parallax-contact {
+                background-image: url("contact bg (2).jpg");
+                background-size: cover;
+                background-repeat:no-repeat;
+                background-attachment: fixed;
+                background-position: center;
+                height:100%;
+            }
+
             #projects {
                 background-image:url("projects-bg.jpg");
                 width:100%;
@@ -56,21 +68,24 @@
 
             #contact {
                 text-align:center;
-                 background-image: url("contact bg (2).jpg");
                 padding:1.5rem;
-                background-size: cover;
-               
-                
+      
             }
             
            #mynavbar {
                background-image: linear-gradient(to right, white, grey);
-            
+                text-align: center;
+           }
+           
+           #mynavbar .active {
+               font-size:large;
+                
            }
 
 
             h1 {
-                font-size: 5vw;;
+                font-size: 5vw;
+               
             }
 
             
@@ -80,13 +95,16 @@
           
           main {
               margin-top: 0.5em;
+              font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
           }
           html {
             scroll-padding-top:4.5rem;
             scroll-behavior:smooth;
+          
           }
           #welcomePicture {
-              margin-left:1rem;
+              margin-right:1rem;
           }
 
          
@@ -129,30 +147,36 @@
         </header>
         <main>
             
-            <section id="home">
-                <div class="row align-items-center no-gutters" >
-                    <div class="col col-8">
-                            <h1>Andy McGinn</h1><br>
-                        <p>Student of French & German at the University of Manchester.
+            <section id="home" class="parallax-welcome vh-100 container">
+               <h1>Andy McGinn</h1>
+                <div class="row no-gutters " >
+                   
+                
+                    <div class="col">
+                        <img class="img img-fluid profile-pic rounded-circle img-thumbnail" src="profilepic.jpg" id="welcomePicture">
+                    </div>   <!--column--> 
+                    <div class="col">
+                            
+                        
+                            <p>Student of French & German at the University of Manchester.
                             Using lockdown to learn to code
                             and hopefully make some great webpages</p>
-                        <div class="row">
-                            <div  class="col"><a  target="_blank" href="https://www.linkedin.com/in/andrew-mcginn/"><img  class="img img-fluid logo " src="https://image.flaticon.com/icons/svg/174/174857.svg"></a>
-                            <a  target="_blank" href="https://www.facebook.com/andrew.mcginn.96/"><img  class="img img-fluid logo" src="https://facebookbrand.com/wp-content/uploads/2019/04/f_logo_RGB-Hex-Blue_512.png?w=512&h=512"></a>
-                            <a  target="_blank" href="https://codepen.io/AndyFrenchGerman/full/xaVMMR"><img class="img img-fluid logo" src="https://lh3.googleusercontent.com/0ey_MpM5lIUMtn0OpEB7VV_04_9HPm52xK2U4mAKT7YcGMy0wwmqAiqY1C_HoC75onKTfWi39w=s328-no"></a></div>
-                        </div> 
-                    </div>
-                    <div class="col col-4">
-                        <img class="img img-fluid profile-pic rounded-circle img-thumbnail" src="profilepic.jpg" id="welcomePicture">
-                    </div>    
+                            
+                                                    
+                    </div><!--column-->
+                    <div  class="col">
+                                    <a  target="_blank" href="https://www.linkedin.com/in/andrew-mcginn/"><img  class="img img-fluid logo " src="https://image.flaticon.com/icons/svg/174/174857.svg"></a>
+                                    <a  target="_blank" href="https://www.facebook.com/andrew.mcginn.96/"><img  class="img img-fluid logo" src="https://facebookbrand.com/wp-content/uploads/2019/04/f_logo_RGB-Hex-Blue_512.png?w=512&h=512"></a>
+                                    <a  target="_blank" href="https://codepen.io/AndyFrenchGerman/full/xaVMMR"><img class="img img-fluid logo" src="https://lh3.googleusercontent.com/0ey_MpM5lIUMtn0OpEB7VV_04_9HPm52xK2U4mAKT7YcGMy0wwmqAiqY1C_HoC75onKTfWi39w=s328-no"></a>
+                        </div><!--collumn-->    
                     
-                </div>
+                 </div><!--row-->   
                
             </section>
             
-            <section id="projects" class="justify-content-center">
+            <section id="projects" class=" vh-100  d-flex flex-column justify-content-center">
                
-                   <h2>Here are some of the pages I've coded</h2>
+                   <h2 class="mb-5">Here are some of the pages I've coded</h2>
                 <div class="carousel slide container " data-interval="5000" id="projects-carousel" data-ride="carousel" >
                    
                     <ol class="carousel-indicators">
@@ -184,7 +208,7 @@
                
             </section>
 
-            <section id="contact" class="align-items-center h-auto text-light">
+            <section id="contact" class="align-items-center h-auto text-light parallax-contact">
                 <h2>Get in touch!</h2>
                 <p>If you'd like to ask me anything about myself, my studies or just about life in general, send me a message with some contact details and I'll reply ASAP!
                     No spam thanks! (not that you could, as this is a fake form ;) )</p>
